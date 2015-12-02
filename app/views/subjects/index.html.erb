@@ -1,0 +1,23 @@
+<h1><%= t :subjects %></h1>
+
+<div class="row">
+  <div class="col-sm-8">
+    <% if !(@subjects.empty?) %>
+    <% @subjects.each do |subject| %>
+      <div class="jumbotron">
+        <%= link_to subject do %>
+          <h2><%= subject.name %></h2>
+        <% end %>
+        <p><%= subject.description %></p>
+      </div>
+    <% end %>
+    <% else %>
+      <div class="jumbotron">
+        <p><%= t :sub_unassigned %></p>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-sm-1">
+    <!--PLACEHOLDER: Progress-->
+  </div>
+</div>

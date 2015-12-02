@@ -20,7 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
   about: "About"
   contact: "Contact"
   password: "Password"
@@ -37,3 +36,5 @@ en:
   my_course:    "My Course"
   title:        "Framgia Training System"
   continue:     "Continue Current Course"
+  subjects: "Subjects"
+  sub_unassigned: "You haven't been assigned any course yet"
