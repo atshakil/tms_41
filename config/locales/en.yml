@@ -93,3 +93,8 @@ en:
   error: "error"
   remove: "Remove"
   add_tasks: "Add tasks"
+  edit_subject: "Edit subject"
+  subject_update_success: "Subject has been updated successfully!"s
+  subject_update_failure: "Subject could not be updated!"
+  subject_removal_success: "Subject has been deleted successfully"
+  subject_removal_failure: "Subject couldn't be deleted! Maybe it's locked."

@@ -22,7 +22,11 @@ Tahmid Shakil:
 		> Requires: db course attribute "deadline"
 		> File: supervisor/subjects/show.html.erb
 		> Modification:
-			> Replace "NOT IMPLEMENTED YET" with current_user
-			> Replace '#' links with paths in corresponding comment block
+		> Replace "NOT IMPLEMENTED YET" with current_user
+		> Replace '#' links with paths in corresponding comment block
 			
+	> Incompatibility 3
+		> Requires: Subject lock attribute
+		> File: supervisor/subjects_controller.rb && supervisor/subjects/show.html.erb
+		> Modification: Disable "Delete" button based on lock state, remove failure block from controller
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

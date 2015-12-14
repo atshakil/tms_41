@@ -1,4 +1,4 @@
-<h2><%= t "create_subject" %></h2>
+<h2><%= t :create_subject %></h2>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -14,7 +14,7 @@
       <h3><%= t :tasks %></h3>
 
       <%= subjects_form_obj.fields_for :tasks do |tasks_form_obj| %>
-        <%= render :tasks_form, f: tasks_form_obj %>
+        <%= render "tasks_form", f: tasks_form_obj %>
       <% end %>
       <p><%= link_to_add_fields t(:add_tasks), subjects_form_obj, :tasks %></p>
 
