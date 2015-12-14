@@ -1,2 +1,24 @@
-<h1>Subjects#edit</h1>
-<p>Find me in app/views/subjects/edit.html.erb</p>
+<h2><%= t :edit_subject %></h2>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:supervisor, @subject] do |subjects_form_obj| %>
+      <%= render "shared/error_messages", object: subjects_form_obj.object %>
+
+      <%= subjects_form_obj.label :name %>
+      <%= subjects_form_obj.text_field :name, class: "form-control" %>
+
+      <%= subjects_form_obj.label :description %>
+      <%= subjects_form_obj.text_area :description, class: "form-control" %>
+
+      <h3><%= t :tasks %></h3>
+
+      <%= subjects_form_obj.fields_for :tasks do |tasks_form_obj| %>
+        <%= render "tasks_form", f: tasks_form_obj %>
+      <% end %>
+      <p><%= link_to_add_fields t(:add_tasks), subjects_form_obj, :tasks %></p>
+
+      <%= subjects_form_obj.submit %>
+    <% end %>
+  </div>
+</div>
