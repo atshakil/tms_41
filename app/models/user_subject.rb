@@ -2,6 +2,9 @@ class UserSubject < ActiveRecord::Base
   belongs_to :user
   belongs_to :course_subject
 
+  validates :user, presence: true
+  validates :course_subject, presence: true
+
   has_one :subject, through: :course_subject
   has_many :user_tasks
   accepts_nested_attributes_for :user_tasks, reject_if:
