@@ -11,7 +11,7 @@ class Subject < ActiveRecord::Base
       proc { |attributes| attributes["name"].blank? },
         allow_destroy: true
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 
   include PublicActivity::Model
   tracked except: :destroy, owner: ->(controller, model) {controller && controller.current_user}
