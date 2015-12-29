@@ -144,3 +144,5 @@ en:
   subject_empty_user: "You haven't been assigned any subject yet!"
   task_modified_successfully: "%{course_name} :: %{subject_name} tasks modified successfully"
   subject_removal_success: "Subject has been removed successfully"
+  all_subs: "All Subjects"
+  base_title: "Training Management System"
