@@ -6,4 +6,6 @@ class Task < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :user_subject_task
+
+  validates :name, uniqueness: true, presence: true
 end

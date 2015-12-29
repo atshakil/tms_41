@@ -11,7 +11,7 @@ class UserSubjectsController < ApplicationController
   end
 
   def update
-   begin
+    begin
       @user_subject.update_attributes user_subject_params
       flash[:success] = t :task_update_success
     rescue
